@@ -9,6 +9,7 @@ app.set('view engine', 'ejs');
 
 let counter = 0;
 
+
 app.get('/', (req, res) => {
   counter = counter + 1;
   res.render('pages/home', { counter: counter });
