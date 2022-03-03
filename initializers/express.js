@@ -1,13 +1,15 @@
 import express from 'express';
 import cors from 'cors';
 
-const port = 4000;
+import userEndpoints from '../app/endpoints/users/index.js';
 
 const init = async () => {
   const app = express();
   
   app.use(cors());
   app.use(express.json());
+  
+  userEndpoints(app);
 
   return app;
 };
